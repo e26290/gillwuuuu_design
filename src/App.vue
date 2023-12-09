@@ -1,6 +1,3 @@
-<script setup>
-</script>
-
 <template>
   <div>
     <a href="https://vitejs.dev" target="_blank">
@@ -13,5 +10,12 @@
   </div>
 </template>
 
-<style scoped>
-</style>
+<script>
+export default {
+  mounted() {
+    this.$router.push('/page1');
+  }
+};
+</script>
+
+<style scoped></style>
