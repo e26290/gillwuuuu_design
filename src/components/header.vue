@@ -1,12 +1,12 @@
 <template>
-    <div id="app">
-        <header>
-            <router-link to="/home">Home</router-link>
-            <router-link to="/about">About</router-link>
-            <router-link to="/services">Services</router-link>
-        </header>
-        <main>
-            <router-view></router-view>
-        </main>
-    </div>
+    <header>
+        <h1>1233333</h1>
+    </header>
 </template>
+<script setup></script>
+<style scoped lang="scss">
+header {
+    width: 200px;
+    height: 100px;
+}
+</style>

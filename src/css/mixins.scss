@@ -5,12 +5,14 @@
     gap: $g;
 }
 
-@mixin responsive() {
-    @media only screen and (max-width: 767px) {
+@mixin breakpoint($size) {
+    @media (max-width: $size) {
         @content;
     }
 }
 
+
+// ----------------------------------------------------------------
 @mixin sectionTitle {
     color: var(--black);
     font-size: 2.5rem;
@@ -27,12 +29,6 @@
     padding: 8rem 0;
     @include media-breakpoint-up(768px) {
         padding: 5rem 0;
-    }
-}
-
-@mixin media-breakpoint-up($size) {
-    @media (max-width: $size) {
-        @content;
     }
 }
 
