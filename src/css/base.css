@@ -1,17 +1,36 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* 指定字型 */
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;500;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/* 網頁整體配置 */
+:root {
+  font-family: 'Martian Mono', monospace, 'Noto Sans TC', Helvetica, Arial, 微軟正黑體, sans-serif;
+  line-height: 1.2;
+  font-weight: 400;
+  font-size: 0.875rem;
+
+  /* color-scheme: light dark; */
+  color: var(--white);
+  /* background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: greyscale;
+  -webkit-text-size-adjust: 100%;
 }
+
+* {
+  /* border: solid 1px #333; */
+}
+
+html,
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* ----------------------- */
 
 a {
   font-weight: 500;
@@ -49,23 +68,8 @@ button {
 button:hover {
   border-color: #646cff;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
-.card {
-  padding: 2em;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -76,4 +80,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
