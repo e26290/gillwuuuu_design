@@ -1,12 +1,43 @@
 <template>
     <header>
-        <h1>1233333</h1>
+        <div class="container navbar">
+            <router-link to="/page1">
+                <img src="../assets/img_logo.svg" alt="logo">
+            </router-link>
+            <button class="menu_open">MENU</button>
+        </div>
     </header>
 </template>
 <script setup></script>
 <style scoped lang="scss">
 header {
-    width: 200px;
-    height: 100px;
+    border-bottom: solid 1px var(--grey-D4);
+    padding: 1rem 0;
+    .navbar {
+        padding: 0;
+    }
+
+    .menu_open {
+        position: relative;
+        font-size: 1.75rem;
+        font-weight: 700;
+        font-family: 'Martian Mono', monospace;
+        
+        &::before, &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: -32px;
+            width: 28px;
+            height: 3px;
+            background-color: var(--black);
+        }
+        &::before {
+            top: 13px;
+        }
+        &::after {
+            bottom: 13px;
+        }
+    }
 }
 </style>

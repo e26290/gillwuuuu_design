@@ -5,12 +5,12 @@
     --broun: #AD611B;
 
     /* 自然色 */
-    --grey_F3: #f3f3f3;
-    --grey_CC: #cccccc;
-    --grey_D4: #d4d4d4;
-    --grey_9F: #9f9f9f;
-    --grey_66: #666666;
-    --grey_33: #333333;
+    --grey-F3: #f3f3f3;
+    --grey-CC: #cccccc;
+    --grey-D4: #d4d4d4;
+    --grey-9F: #9f9f9f;
+    --grey-66: #666666;
+    --grey-33: #333333;
     --black: #000;
     --white: #fff;
 }
