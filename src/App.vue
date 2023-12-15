@@ -12,7 +12,7 @@ import footer_vue from './components/footer.vue';
 <script>
 export default {
   mounted() {
-    this.$router.push('/page1');
+    this.$router.push('/');
   }
 };
 </script>

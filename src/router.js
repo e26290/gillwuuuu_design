@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Page1 from './components/page1.vue';
+import index from './components/index.vue';
 import Page2 from './components/page2.vue';
 
 const routes = [
-    { path: '/page1', component: Page1 },
+    { path: '/', component: index },
     { path: '/page2', component: Page2 }
 ];
 

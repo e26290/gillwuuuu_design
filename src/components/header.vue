@@ -21,7 +21,6 @@ header {
         position: relative;
         font-size: 1.75rem;
         font-weight: 700;
-        font-family: 'Martian Mono', monospace;
         
         &::before, &::after {
             content: "";

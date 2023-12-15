@@ -2,7 +2,7 @@
     /* 網站標準色 */
     --primary: #0BAA4F;
     --yellow: #E3B82B;
-    --broun: #AD611B;
+    --bruno: #AD611B;
 
     /* 自然色 */
     --grey-F3: #f3f3f3;
@@ -11,6 +11,7 @@
     --grey-9F: #9f9f9f;
     --grey-66: #666666;
     --grey-33: #333333;
+    --grey-1D: #1D1D1D;
     --black: #000;
     --white: #fff;
 }
