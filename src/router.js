@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import index from './components/index.vue';
-import Page2 from './components/page2.vue';
+import work from './components/work.vue';
 
 const routes = [
     { path: '/', component: index },
-    { path: '/page2', component: Page2 }
+    { path: '/work', component: work }
 ];
 
 const router = createRouter({

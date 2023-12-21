@@ -13,6 +13,10 @@
 header {
     border-bottom: solid 1px var(--grey-D4);
     padding: 1rem 0;
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
     .navbar {
         padding: 0;
     }

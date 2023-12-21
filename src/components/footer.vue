@@ -59,7 +59,7 @@
 </template>
 <script setup></script>
 <style scoped lang="scss">
-@import "src/css/mixins.scss";
+@import "src/css/_mixins.scss";
 
 footer {
     padding: 3rem 0;
