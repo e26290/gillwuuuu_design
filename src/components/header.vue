@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="container navbar">
-            <router-link to="/page1">
+            <router-link to="/">
                 <img src="../assets/img_logo.svg" alt="logo">
             </router-link>
             <button class="menu_open">MENU</button>

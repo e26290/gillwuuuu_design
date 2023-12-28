@@ -9,12 +9,5 @@
 import header_vue from './components/header.vue';
 import footer_vue from './components/footer.vue';
 </script>
-<script>
-export default {
-  mounted() {
-    this.$router.push('/');
-  }
-};
-</script>
 <style scoped>
 </style>

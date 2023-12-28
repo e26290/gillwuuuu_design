@@ -17,7 +17,7 @@
     <div class="aboutme ptb">
         <div class="container">
             <h2 class="secTitle"># ABOUT ME</h2>
-
+            <!-- TODO 資料待補 -->
             <!-- group 1 -->
             <div class="row g-3 mb-3">
                 <div class="col-md-8">

@@ -4,6 +4,7 @@
             <div class="row">
                 <div class="col-md-5 col-sm-12">
                     <!-- TODO 表單送到哪？ -->
+                    <!-- TODO 把表單切出去做元件 -->
                     <form action="" class="form">
                         <h5 class="formTitle">歡迎您與我們聯絡！</h5>
                         <div class="main">
@@ -31,8 +32,6 @@
                                 required />
                             <input class="text_input" type="email" id="email" pattern=".+@example\.com" size="30" placeholder="信箱" required />
                             <textarea class="text_input" id="content" name="content" rows="3" placeholder="內容"></textarea>
-
-
                         </div>
                         <button type="submit" class="formBtn">送出表單</button>
                     </form>
@@ -46,7 +45,7 @@
                         <li><router-link to="/contact" class="item">Contact</router-link></li>
                         <li><router-link to="/ramblings" class="item">Ramblings</router-link></li>
                     </ul>
-                    <router-link to="/page1">
+                    <router-link to="/">
                         <img src="../assets/img_logo_w.svg" alt="logo">
                     </router-link>
                     <span class="copyright">
