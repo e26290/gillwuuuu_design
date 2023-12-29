@@ -45,16 +45,24 @@
         @include flex($a: flex-start);
         flex-direction: row;
         .card_cover {
-            // width: 100%;
-            max-width: 240px;
+            background-color: red;
+            width: 100%;
             height: 100%;
+            flex-basis: 24rem;
             aspect-ratio: 4/3;
             overflow: hidden;
+            display: grid;
+            place-items: center;
+
             img {
-                width: 100%;
+                // height: 100%;
+                // min-height: 100%;
+                // -webkit-min-logical-height: 100%;
+                width: 150%;
             }
         }
         .card_main {
+            flex-basis: 100%;
             padding: 1.5rem;
             @include flex($a: flex-start);
             flex-direction: column;
@@ -65,10 +73,7 @@
                 margin: 0;
             }
             .content {
-                // TODO 這裡要改寫寫法。
-                height: 72px;
-                overflow: hidden;
-                line-height: 180%;
+                @include textOver;
             }
         }
     }
