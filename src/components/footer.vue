@@ -4,7 +4,6 @@
             <div class="row">
                 <div class="col-md-5 col-sm-12">
                     <!-- TODO 表單送到哪？ -->
-                    <!-- TODO 把表單切出去做元件 -->
                     <form action="" class="form">
                         <h5 class="formTitle">歡迎您與我們聯絡！</h5>
                         <div class="main">
@@ -42,7 +41,7 @@
                     </button>
                     <ul class="navItems">
                         <li><router-link to="/work" class="item">Work</router-link></li>
-                        <li><router-link to="/contact" class="item">Contact</router-link></li>
+                        <!-- <li><router-link to="/contact" class="item">Contact</router-link></li> -->
                         <li><router-link to="/ramblings" class="item">Ramblings</router-link></li>
                     </ul>
                     <router-link to="/">
@@ -166,6 +165,7 @@ footer {
     .copyright {
         display: block;
         color: var(--grey-9F);
+        font-size: 0.75rem;
     }
 
     #pageTop {

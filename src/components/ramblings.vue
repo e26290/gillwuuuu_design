@@ -45,7 +45,6 @@
         @include flex($a: flex-start);
         flex-direction: row;
         .card_cover {
-            background-color: red;
             width: 100%;
             height: 100%;
             flex-basis: 24rem;
@@ -55,10 +54,7 @@
             place-items: center;
 
             img {
-                // height: 100%;
-                // min-height: 100%;
-                // -webkit-min-logical-height: 100%;
-                width: 150%;
+                width: 170%;
             }
         }
         .card_main {

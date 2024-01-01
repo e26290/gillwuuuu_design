@@ -61,8 +61,9 @@ import area_contact from './area_contact.vue';
 </script>
 
 <style scoped lang="scss">
+@import "src/css/_mixins.scss";
 .contact {
-    height: max(400px, (100vh - 69px));
+    // height: max(400px, (100vh - 69px));
     background-color: var(--grey-F7);
     .container {
         height: max(400px, 100%);
@@ -79,6 +80,66 @@ import area_contact from './area_contact.vue';
         position: absolute;
         right: 0;
         top: 3rem;
+    }
+
+    .form {
+        width: 100%;
+        padding: 1.5rem;
+        .main {
+            @include flex($a: stretch);
+            flex-direction: column;
+            margin: 2rem 0;
+        }
+
+        .ask {
+            @include flex($j: flex-start);
+            flex-wrap: wrap;
+
+            .askItem {
+                @include flex($g: 0.5rem);
+            }
+
+            input[type=checkbox] {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -ms-appearance: none;
+                -o-appearance: none;
+                appearance: none;
+                height: 1.5rem;
+                width: 1.5rem;
+                border: solid 1px var(--grey-D4);
+                cursor: pointer;
+                display: inline-block;
+
+                &:hover {
+                    background: var(--grey-D4);
+                }
+
+                &:checked {
+                    background: var(--yellow);
+                }
+            }
+        }
+
+        .text_input {
+            background-color: transparent;
+            color: var(--grey-33);
+            border: none;
+            border-bottom: solid 1px var(--grey-D4);
+            padding: 0.75rem  1rem;
+            
+            &:focus-visible {
+                outline: none;
+                border-bottom: solid 1px var(--yellow);
+            }
+        }
+
+        .formBtn {
+            padding: 0.75rem 4.5rem;
+            color: var(--white);
+            background-color: var(--bruno);
+            border-radius: 0.5rem;
+        }
     }
 
     .imgbox {
