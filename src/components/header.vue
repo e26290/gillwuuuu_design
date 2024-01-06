@@ -4,7 +4,7 @@
             <router-link to="/">
                 <h1 class="logo"></h1>
             </router-link>
-            <button class="menu_open" @click="toggleMenu">MENU</button>
+            <button class="menu_open" @click="toggleMenu" :class="{ 'active': isMenuOpen }">MENU</button>
         </div>
     </header>
 
@@ -44,7 +44,7 @@ const isMenuOpen = ref(false);
 
 // 切換菜單狀態的方法
 const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value; // 切換菜單狀態（開啟或關閉）
+  isMenuOpen.value = !isMenuOpen.value; // 切換選單視窗狀態（開啟或關閉）
 };
 </script>
 
@@ -88,6 +88,7 @@ header {
             width: 28px;
             height: 3px;
             background-color: var(--black);
+            transition: transform 0.5s;
         }
         &::before {
             top: 13px;
@@ -96,6 +97,8 @@ header {
             bottom: 13px;
         }
     }
+
+    
 }
 
 header.black-bg {
@@ -111,6 +114,14 @@ header.black-bg {
             background-color: var(--yellow);
             transition: 0.5s;
         }
+    }
+    .menu_open.active::before {
+        transform: rotate(45deg);
+        top: 20px;
+    }
+    .menu_open.active::after {
+        transform: rotate(-45deg);
+        bottom: 18px;
     }
 }
 
