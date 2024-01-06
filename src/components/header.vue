@@ -1,45 +1,57 @@
 <template>
-    <header>
+    <header :class="{ 'black-bg': isMenuOpen }">
         <div class="container navbar">
             <router-link to="/">
-                <img src="../assets/img_logo.svg" alt="logo">
+                <h1 class="logo"></h1>
             </router-link>
-            <button class="menu_open">MENU</button>
+            <button class="menu_open" @click="toggleMenu">MENU</button>
         </div>
     </header>
 
     <!-- menu -->
-    <div id="menu-page">
-        <div class="container ptb">
-            <div class="row">
-                <div class="col-md-6 info">
-                    <h2>
-                        請講一些廢話～～<br>
-                        ～～～～～～<br>
-                        ～～～<br>
-                    </h2>
-                </div>
-                <div class="col-md-6 item">
-                    <ul class="navItems">
-                        <li><router-link to="/work" class="item">Work</router-link></li>
-                        <!-- <li><router-link to="/contact" class="item">Contact</router-link></li> -->
-                        <li><router-link to="/ramblings" class="item">Ramblings</router-link></li>
-                    </ul>
-                    <span class="copyright">
-                        Copyright © 2024 Gill WUUUU. All rights reserved.
-                    </span>
+    <transition name="slide">
+        <div id="menu-page" v-show="isMenuOpen">
+            <div class="container ptb">
+                <div class="row">
+                    <div class="col-md-6 info">
+                        <h2>
+                            請講一些廢話～～<br>
+                            ～～～～～～<br>
+                            ～～～<br>
+                        </h2>
+                    </div>
+                    <div class="col-md-6 item">
+                        <ul class="navItems">
+                            <li><router-link to="/work" class="item">Work</router-link></li>
+                            <!-- <li><router-link to="/contact" class="item">Contact</router-link></li> -->
+                            <li><router-link to="/ramblings" class="item">Ramblings</router-link></li>
+                        </ul>
+                        <span class="copyright">
+                            Copyright © 2024 Gill WUUUU. All rights reserved.
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </transition>
+    
 </template>
 <script setup>
+import { ref } from 'vue';
 
+// 使用 ref 創建一個響應式狀態
+const isMenuOpen = ref(false);
+
+// 切換菜單狀態的方法
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value; // 切換菜單狀態（開啟或關閉）
+};
 </script>
 
 <style scoped lang="scss">
 @import "src/css/_mixins.scss";
 header {
+    transition: 0.3s;
     border-bottom: solid 1px var(--grey-D4);
     padding: 1rem 0;
     position: fixed;
@@ -51,6 +63,14 @@ header {
         flex-direction: row;
         justify-content: space-between;
     }
+
+    .logo {
+        width: 200px;
+        height: 40px;
+        background-image: url(../assets/img_logo.svg);
+        background-repeat: no-repeat;
+    }
+
     .navbar {
         padding: 0;
     }
@@ -78,15 +98,30 @@ header {
     }
 }
 
+header.black-bg {
+    transition: 0.3s;
+    border-bottom: solid 1px var(--grey-D4);
+    background-color: var(--grey-1D);
+    .logo {
+        background-image: url(../assets/img_logo_w.svg);
+    }
+    .menu_open {
+        color: var(--yellow);
+        &::before, &::after {
+            background-color: var(--yellow);
+            transition: 0.5s;
+        }
+    }
+}
+
 #menu-page {
-    // display: none;
     position: fixed;
-    top: 69px;
+    top: 76px;
     left: 0;
     background-color: var(--grey-1D);
     width: 100vw;
-    height: calc( 100vh - 69px );
-    z-index: 99;
+    height: calc( 100vh - 76px );
+    z-index: 98;
     color: var(--grey-9F);
     .info {
         height: 100vh;
@@ -135,5 +170,21 @@ header {
         font-size: 0.75rem;
     }
 
+}
+
+// menu的transition動畫
+.slide-leave-active,
+.slide-enter-active {
+  transition: all 0.3s ease-in-out;
+}
+
+.slide-enter-from {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.slide-leave-to {
+  transform: translateY(200%);
+  opacity: 1;
 }
 </style>
