@@ -5,7 +5,7 @@
                 <div class="col-md-5 col-sm-12">
                     <!-- TODO 表單送到哪？ -->
                     <form action="" class="form">
-                        <h5 class="formTitle">歡迎您與我們聯絡！</h5>
+                        <h5 class="formTitle">歡迎您與我聯絡！</h5>
                         <div class="main">
                             <div class="ask">
                                 <span class="checkTitle">詢問項目</span>
@@ -165,7 +165,7 @@ footer {
     .copyright {
         display: block;
         color: var(--grey-9F);
-        font-size: 0.75rem;
+        font-size: 0.875rem;
     }
 
     #pageTop {

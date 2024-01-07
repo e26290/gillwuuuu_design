@@ -80,11 +80,13 @@ button {
 
 .card {
   height: 100%;
-  background-color: var(--white);
-  /* border: none; */
+  /* background-color: var(--white); */
+  background-color: transparent;
+  border: none;
   border-radius: 1.5rem;
-  display: grid;
-  place-items: center;
-  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
   overflow: hidden;
 }

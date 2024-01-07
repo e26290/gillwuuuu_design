@@ -19,6 +19,11 @@
     -webkit-box-orient: vertical;
 }
 
+@mixin imgCover($url, $pos:center) {
+    background-image: url($url);
+    background-position: $pos;
+    background-size: cover;
+}
 // ----------------------------------------------------------------
 @mixin sectionTitle {
     color: var(--black);

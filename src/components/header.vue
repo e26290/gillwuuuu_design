@@ -9,6 +9,7 @@
     </header>
 
     <!-- menu -->
+    <!-- TODO 這裡有個問題待解決，outer-link點下去是不會自動關閉menu -->
     <transition name="slide">
         <div id="menu-page" v-show="isMenuOpen">
             <div class="container ptb">
@@ -117,7 +118,7 @@ header.black-bg {
     }
     .menu_open.active::before {
         transform: rotate(45deg);
-        top: 20px;
+        top: 18px;
     }
     .menu_open.active::after {
         transform: rotate(-45deg);
@@ -178,7 +179,7 @@ header.black-bg {
         }
     }
     .copyright {
-        font-size: 0.75rem;
+        font-size: 0.875rem;
     }
 
 }
@@ -186,16 +187,16 @@ header.black-bg {
 // menu的transition動畫
 .slide-leave-active,
 .slide-enter-active {
-  transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .slide-enter-from {
-  transform: translateY(100%);
-  opacity: 0;
+    transform: translateY(100%);
+    opacity: 0;
 }
 
 .slide-leave-to {
-  transform: translateY(200%);
-  opacity: 1;
+    transform: translateY(200%);
+    opacity: 1;
 }
 </style>

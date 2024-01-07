@@ -20,6 +20,9 @@
     }
     .email {
         @include flex;
+        .fa-paper-plane {
+            font-size: 1.5rem;
+        }
     }
 }
 </style>
