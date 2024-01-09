@@ -36,7 +36,7 @@
                     </form>
                 </div>
                 <div class="col-md-7 col-sm-12 info">
-                    <button id="pageTop">
+                    <button id="pageTop" @click="scrollToTop">
                         <i class="fa-solid fa-arrow-up"></i>
                     </button>
                     <ul class="navItems">
@@ -56,6 +56,18 @@
     </footer>
 </template>
 <script setup></script>
+<script>
+    export default {
+        methods: {
+            scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    };
+</script>
 <style scoped lang="scss">
 @import "src/css/_mixins.scss";
 
